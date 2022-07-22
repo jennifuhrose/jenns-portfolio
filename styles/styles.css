@@ -1,17 +1,21 @@
 :root {
-  --primary-color: #6c63ff;
-  --secondary-color: #f5f2fe;
+  --primary-color: #7f5283;
+  --secondary-color: #a6d1e6;
+  --tertiary-color: #c9bbcf;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 body {
+  background-color: #fefbf6;
   margin: 100px 0;
+  font-family: "Raleway", sans-serif;
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
+  color: #3d3c42;
 }
 
 h1 {
@@ -28,8 +32,16 @@ h3 {
 }
 
 p {
+  color: #3d3c42;
   font-size: 18px;
   line-height: 1.5;
+}
+
+.background {
+  background-color: var(--secondary-color);
+}
+.contact-font {
+  color: var(--tertiary-color);
 }
 
 .navigation-links {
@@ -89,6 +101,7 @@ p {
 
 .email-link:hover {
   text-decoration: underline;
+  color: var(--secondary-color);
 }
 
 @media (max-width: 576px) {
