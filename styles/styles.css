@@ -103,6 +103,10 @@ p {
   color: var(--secondary-color);
 }
 
+.button-margin {
+  margin-bottom: 50px;
+}
+
 @media (max-width: 576px) {
   h1 {
     font-size: 48px;
