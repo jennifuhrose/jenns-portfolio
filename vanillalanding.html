@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla</title>
+    <style>
+      p {
+        color: blanchedalmond;
+        line-height: 30px;
+      }
+      h1 {
+        color: beige;
+        font-size: 35px;
+      }
+      h2 {
+        font-size: 18px;
+        font-weight: lighter;
+        color: antiquewhite;
+      }
+      h4 {
+        font-size: 14px;
+        color: rgb(192, 98, 98);
+      }
+      button {
+        background-color: #7c3e66;
+        color: #fff;
+        font-size: 16px;
+        padding: 15px 20px;
+        margin: 30px auto;
+        display: block;
+        border: 1px solid #7c3e66;
+        border-radius: 25px;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        transition: all 150ms ease-in-out;
+        width: 150px;
+      }
+      button:hover {
+        background: #fff;
+        color: #7c3e66;
+        border: 1px solid #7c3e66;
+      }
+      img {
+        border: 3px solid #7c3e66;
+        border-radius: 28px;
+      }
+      body {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(
+          to right,
+          #7c3e66,
+          #4c3575,
+          #5b4b8a,
+          #7858a6
+        );
+        margin-left: 250px;
+        margin-right: 250px;
+        width: auto;
+      }
+      a {
+        transition: all 200ms ease;
+        opacity: 1;
+        color: #fbcb0a;
+        text-decoration: none;
+        font-size: 24px;
+      }
+
+      a:hover {
+        color: rgb(233, 224, 148);
+        text-decoration: underline;
+      }
+      .vanilla {
+        font-weight: bold;
+      }
+      .species {
+        font-style: italic;
+        font-weight: bold;
+      }
+      .buttonEmail {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vanilla Beans</h1>
+    <img
+      src="https://media.npr.org/assets/img/2019/09/06/dscf0922-52_custom-9211deeee50869c448f40cf38169518d50890580-s1000-c85.webp"
+      alt="Vanilla Beans"
+      width="400"
+    />
+    <h2>
+      Vanilla is among the most popular flavoring agents in the world. It's
+      favored for its pleasing taste and calming aroma.
+    </h2>
+    <hr />
+    <p>
+      There are three main species of vanilla that are produced commercially.
+      These include <span class="vanilla">vanilla</span>
+      <span class="species">planifolia</span>,
+      <span class="vanilla">vanilla</span>
+      <span class="species">tahitiensis</span>, and
+      <span class="vanilla">vanilla</span>
+      <span class="species">pompona</span>. Each species has unique
+      characteristics.
+    </p>
+    <p>
+      The <em>planifolia</em> species is grown throughout much of the world,
+      from Hawaii to Mexico to Madagascar and is by far the most heavily
+      produced. This species is typically more round and plump compared to the
+      other species. However, strong variations do exist.
+    </p>
+    <p>
+      The
+      <em>tahitiensis</em> species, commonly referred to as “Tahitian Vanilla”,
+      typically has a more floral aroma and flavor. Tahitian vanilla beans also
+      contain less vanillin content (the active ingredient responsible for
+      flavor) and are often used in perfumes. Tahitian vanilla beans also tend
+      to be wide and flat.
+    </p>
+    <p>
+      The <em>pompona</em> species is native to Mexico and northern South
+      America. It is one of the sources for vanilla flavoring, due to its high
+      vanillin content. Known for its larger than average size, the uncured pods
+      look like miniature, four-inch-long bananas.
+    </p>
+    <p>
+      Like fine wine, the location which the vanilla is grown plays a large role
+      in the aroma and flavor profiles of a vanilla bean. This is due to each
+      country having a unique method of curing and drying vanilla beans. So many
+      unique curing processes results an equally large difference in flavors
+      produced by the vanilla bean.
+    </p>
+    <p>
+      <a href="https://indrivanilla.com/" target="_blank">Buy vanilla beans</a>
+    </p>
+    <button
+      class="buttonVanilla"
+      onclick="window.open('https://en.wikipedia.org/wiki/Vanilla')"
+    >
+      Learn more about <strong>Vanilla</strong>
+    </button>
+    <h4>🧁</h4>
+    <button class="mailButton">
+      Sign up for
+      <div class="buttonEmail"><strong>emails</strong></div>
+    </button>
+
+    <script>
+      function updateHeading(newHeading) {
+        let heading = document.querySelector("h4");
+        heading.innerHTML = newHeading;
+      }
+      function giveName() {
+        let personName = prompt("What is your name?");
+        return personName;
+      }
+      function askEmail() {
+        let emailAsk = prompt("What is your email?");
+        let personName = giveName();
+        if (personName === "") {
+          updateHeading(
+            `😦<br />Sorry, name not recognized, please try again.`
+          );
+        } else {
+          alert(`🥳 Thanks ${personName}, we'll be in touch!`);
+          updateHeading(`🥳 <br />Thanks ${personName}, we'll be in touch!`);
+        }
+      }
+
+      let mailButton = document.querySelector(".mailButton");
+      mailButton.addEventListener("click", askEmail);
+    </script>
+  </body>
+</html>
