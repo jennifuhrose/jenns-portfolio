@@ -36,9 +36,16 @@ p {
   line-height: 1.5;
 }
 
-.background {
-  background-color: var(--secondary-color);
+.hero {
+  background: var(--secondary-color);
+  padding: 20px 0;
 }
+
+.hero h1 {
+  margin: 20px 0;
+  font-family: "Acme", sans-serif;
+}
+
 .contact-font {
   color: var(--tertiary-color);
 }
@@ -57,7 +64,6 @@ p {
   border-radius: 4px;
   padding: 20px 15px;
   text-decoration: none;
-  text-transform: capitalize;
   background: var(--primary-color);
   box-shadow: var(--box-shadow);
   color: white;
@@ -71,9 +77,13 @@ p {
   border-radius: 4px;
   padding: 20px 15px;
   text-decoration: none;
-  text-transform: capitalize;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+  background: #fefbf6;
+}
+
+.secondary-link:hover {
+  color: var(--primary-color);
 }
 
 .homepage-link {
